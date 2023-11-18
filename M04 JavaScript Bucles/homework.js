@@ -151,20 +151,18 @@ function esPrimo(num) {
    // Tu código:
     
    let cont = 0;
-   if (num === 0 || num === 1 || num < 0) {
-     return "NO son numeros primos";
+   if (num <= 1) {
+     return false;
    }
    for (let i = 0; i <= num; i++) {
      if (num % i === 0) {
-       cont++;
+       return true
      }
    }
-   if (cont === 2) {
-     return true;
-   }
-   return false;
-   
+   return false;   
 }
+
+
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
