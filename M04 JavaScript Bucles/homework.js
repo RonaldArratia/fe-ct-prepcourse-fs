@@ -19,7 +19,7 @@ function mayoriaDeEdad(edad) {
    if(edad >= 18){
       return 'Allowed'
    }
-   return 'Not Allowed'
+   return 'Not allowed'
 }
 
 
@@ -46,13 +46,13 @@ function saludo(idioma) {
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
    // Tu código:
    if(idioma ==='aleman'){
-      return 'Guten tag!'
+      return 'Guten Tag!'
    }else if(idioma ==='mandarin'){
       return 'Ni Hao!'
    }else if(idioma === 'ingles'){
       return 'Hello!'
    }
-   return 'Hola'   
+   return 'Hola!'   
 }
 
 function colors(color) {
@@ -64,16 +64,16 @@ function colors(color) {
    // Si no es ninguno de esos colores           --> "Color not found".
    // IMPORTANTE: utilizar el statement SWITCH.
    // Tu código:
-   if(color === 'blue'){
-      return 'This is Blue'
-   }else if(color === 'red'){
-      return 'This is red'
-   }else if(color === 'green'){
-      return 'this is green'
-   }else if(color === 'orange'){
-      return 'This is orange'
+   if(color == "blue"){
+      return "This is blue"
+   }else if(color == "red"){
+      return "This is red"
+   }else if(color == "green"){
+      return "This is green"
+   }else if(color == "orange"){
+      return "This is orange"
    }
-   return 'Color not found'   
+   return "Color not found"
 }
 
 function esDiezOCinco(num) {
@@ -122,6 +122,7 @@ function fizzBuzz(num) {
    }else if(num % 3 === 0 ){
       return 'fizz'
    }
+   return false
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -138,6 +139,8 @@ function operadoresLogicos(num1, num2, num3) {
       return 'Hay negativos'
    }else if(num3 > num1 && num3 > num2){
       return num3 + 1
+   }else if(num1 === 0 || num2 === 0 || num3 ===0){
+      return 'Error'
    }
    return false
 }
@@ -150,16 +153,15 @@ function esPrimo(num) {
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
     
-   let cont = 0;
-   if (num <= 1) {
-     return false;
+   if (num <= 1){
+      return false;
    }
-   for (let i = 0; i <= num; i++) {
-     if (num % i === 0) {
-       return true
-     }
+   for( var i = 2; i < num; i++){
+      if(num % i === 0){
+         return false;
+      }
    }
-   return false;   
+   return true;
 }
 
 
